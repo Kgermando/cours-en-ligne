@@ -1,0 +1,408 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. Header
+	3.1 Logo
+	3.2 Main Nav
+	3.3 Header Side
+	3.4 Hamburger
+4. Menu
+	4.1 Menu Social
+	4.2 Menu copyright
+5. Home
+7. Page Section
+8. Elements
+	8.1 Buttons
+	8.2 Progress Bars
+	8.3 Accordions
+	8.4 Loaders
+	8.5 Milestones
+	8.6 Icon Boxes
+9. Footer
+	9.1 Footer Copyright
+
+
+******************************/
+
+
+/*********************************
+8. Elements
+*********************************/
+
+.elements
+{
+	width: 100%;
+	padding-top: 109px;
+	padding-bottom: 106px;
+}
+.elements_title
+{
+	font-size: 24px;
+	font-weight: 500;
+	color: #1a1a1a;
+}
+
+/*********************************
+8.1 Buttons
+*********************************/
+
+.buttons_container
+{
+	margin-top: 107px;
+}
+.button
+{
+	display: inline-block;
+	width: 188px;
+	height: 53px;
+	vertical-align: middle;
+	margin-right: 9px;
+	margin-bottom: 15px;
+}
+.button:hover
+{
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+.button a
+{
+	line-height: 53px;
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+}
+.button_color_1
+{
+	background: #ffb606;
+}
+.button_color_1 a
+{
+	color: #FFFFFF;
+}
+.button_color_2
+{
+	background: #1a1a1a;
+}
+.button_color_2 a
+{
+	color: #FFFFFF;
+}
+.button_line_1
+{
+	background: transparent;
+	border: solid 2px #ffb606;
+}
+.button_line_1 a
+{
+	color: #ffb606;
+}
+.button_line_2
+{
+	background: transparent;
+	border: solid 2px #1a1a1a;
+}
+.button_line_2 a
+{
+	color: #1a1a1a;
+}
+
+/*********************************
+8.2 Progress Bars
+*********************************/
+
+.pbars_accordions
+{
+	margin-top: 94px;
+}
+.pbars_accordions_container
+{
+	padding-top: 104px;
+}
+.pbar_container
+{
+	background: #f8f4f4;
+	padding-left: 99px;
+	padding-right: 97px;
+	padding-top: 46px;
+	padding-bottom: 45px;
+}
+.pb_item
+{
+	margin-bottom: 18px;
+}
+.pb_item h4
+{
+	color: #1a1a1a;
+	font-weight: 400 !important;
+	padding-left: 2px;
+	margin-bottom: 13px;
+}
+.skill_bars
+{
+	height: 5px;
+}
+
+/*********************************
+8.3 Accordions
+*********************************/
+
+.elements_accordions
+{
+	
+}
+.accordion_container
+{
+	margin-bottom: 15px;
+}
+.accordion
+{
+	height: 60px;
+	width: 100%;
+	background: #f8f4f4;
+	padding-left: 30px;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.accordion.active
+{
+	background: #ffb606;
+	color: #FFFFFF;
+}
+.accordion:active
+{
+	background: #ffb606 !important;
+	color: #FFFFFF;
+}
+.accordion::after
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 62px;
+	height: 100%;
+	content: '+';
+	background: #ffb606;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: 500;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.accordion.active::after
+{
+	content: '-';
+}
+.accordion:hover
+{
+	background: #e4e4e4;
+}
+.accordion_panel
+{
+	padding-left: 30px;
+	padding-right: 30px;
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.accordion_panel p
+{
+	padding-top: 15px;
+}
+
+/*********************************
+8.4 Loaders
+*********************************/
+
+.loaders
+{
+	margin-top: 119px;
+}
+.elements_loaders_container
+{
+	margin-top: 60px;
+}
+.loader
+{
+	width: 195px;
+	height: 195px;
+	margin: 0 auto;
+}
+.loader_text
+{
+	font-size: 16px;
+	font-weight: 500;
+	color: #1a1a1a;
+	margin-top: 26px;
+}
+.loader .progressbar-text
+{
+	top: 50% !important;
+}
+.loader_sub
+{
+	font-size: 15px;
+	font-weight: 400;
+	color: #a5a5a5;
+	margin-top: 5px;
+}
+
+/*********************************
+8.5 Milestones
+*********************************/
+
+.milestones
+{
+	width: 100%;
+	margin-top: 102px;
+}
+.milestones_container
+{
+	width: 100%;
+	padding-top: 118px;
+	padding-bottom: 107px;
+	margin-top: 108px;
+}
+.milestones_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.milestone
+{
+	width: 100%;
+}
+.milestone_icon
+{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+}
+.milestone_icon img
+{
+	width: 100%;
+}
+.milestone_counter
+{
+	font-size: 36px;
+	font-weight: 500;
+	color: #ffb606;
+	line-height: 1;
+	margin-top: 41px;
+}
+.milestone_text
+{
+	font-size: 22px;
+	font-weight: 500;
+	color: #FFFFFF;
+	margin-top: 3px;
+}
+
+/*********************************
+8.6 Icon Boxes
+*********************************/
+
+.icon_boxes
+{
+	margin-top: 112px;
+}
+.icon_boxes_container
+{
+	margin-top: 109px;
+}
+.icon_box
+{
+	
+}
+.icon_box h3
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	color: #1a1a1a;
+	margin-bottom: 13px;
+}
+.icon_box p
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #a5a5a5;
+	max-width: 100%;
+	margin-bottom: 0px;
+}
+.icon_container
+{
+	height: 41px;
+	width: auto;
+	margin-bottom: 30px;
+}
+.icon_container img
+{
+	height: 100%;
+}
+
+/*********************************
+9. Footer
+*********************************/
+
+.footer
+{
+	width: 100%;
+	background: #1a1a1a;
+}
+.footer .section_title h1
+{
+	color: #FFFFFF;
+}
+
+/*********************************
+9.1 Footer Copyright
+*********************************/
+
+.footer_bar
+{
+	padding-top: 19px;
+	padding-bottom: 19px;
+}
+.footer_social .menu_social_item a i
+{
+	color: #FFFFFF;
+}
+.footer_social .menu_social_item a i:hover
+{
+	color: #ffb606;
+}
+.footer_social .menu_social_item:last-child
+{
+	margin-right: 0px;
+}

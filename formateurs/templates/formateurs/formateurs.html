@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Formateurs {% endblock title %}
+
+{% block content %}
+
+<br />
+<!-- Popular -->
+
+<div class="popular page_section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title text-center">
+                    <h1>Nos Formateurs</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row course_boxes">
+
+            <!-- Popular Course Item -->
+            {% for formateurs in formateurs_list %}
+            <div class="col-lg-4 course_box">
+                <div class="card">
+                    <img src="{{ formateurs.profile.url }}" width="300" height="250" class="card-img-top" alt="">
+                    <div class="card-body-formateur text-center">
+                        <div class="card-title"><a href="{% url 'formateurs:details' formateurs.id %}">{{ formateurs.full_name }}</a></div>
+                        <div class="card-text">{{ formateurs.citation }}</div>
+                    </div>
+                
+                </div>
+            </div>
+
+            {% empty %}
+            <h4>Désolé aucun formateur.</h4>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

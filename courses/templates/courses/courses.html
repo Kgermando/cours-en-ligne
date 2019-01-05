@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cours en ligne {% endblock title %}
+
+{% block content %} 
+
+<br/>
+	<!-- Popular -->
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>Cours disponibles</h1>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="row course_boxes">
+				
+				<!-- Popular Course Item -->
+				{% for category in category_list %}
+				<div class="col-lg-4 course_box">
+					<div class="card">	
+						<img src="{{ category.image.url }}" class="card-img-top" alt="">
+						<div class="card-body text-center">
+							<div class="card-title"><a href="{% url 'courses:details' category.id %}">{{ category.name_category }}</a></div>
+							<div class="card-text">{{ category.resume }}</div>
+						</div>
+						<div class="price_box d-flex flex-row align-items-center">
+							<div class="course_author_image">
+								<img src="{{ category.image_auteur.url }}" alt="">
+							</div>
+							<div class="course_author_name"><span>Auteur</span>: {{ category.auteur }}</div>
+							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span>$ {{ category.prix }}</span></div>
+						</div>
+					</div>
+				</div>
+		
+				{% empty %}
+				<h4>Pas des cours en vue.</h4>
+				{% endfor %}
+			</div>
+		</div>		
+	</div>
+
+{% endblock content %}

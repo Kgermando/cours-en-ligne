@@ -1,0 +1,18 @@
+{
+   
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0E3238",
+        "titleBar.activeBackground": "#13464F",
+        "titleBar.activeForeground": "#F5FBFC"
+    },
+    "python.pythonPath": "D:\\Developpements\\PYTHON\\VENV\\venv\\Scripts",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true
+    },
+    "python.formatting.provider": "autopep8"
+}
