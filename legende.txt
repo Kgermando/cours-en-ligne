@@ -2,3 +2,4 @@
 
 1. finir avec les boucles sur la page d'accueil
 2. adapter le page pour debug et cours detail
+3. 
